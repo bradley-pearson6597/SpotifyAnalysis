@@ -186,7 +186,7 @@ user.playlist.all <- user.playlist.all %>%
   dplyr::ungroup() %>%
   dplyr::filter(track_no <=  50)
 
-user.playlist.fast <- jasouser.playlist.all %>%
+user.playlist.fast <- user.playlist.all %>%
   dplyr::filter(tempo > 125)  %>%
   dplyr::arrange(tempo) %>%
   dplyr::distinct(track.name)
